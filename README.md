@@ -20,7 +20,7 @@ add enable_uart=1 to config.txt
 add console=ttyS0, 115200 to cmdline.txt
 
 
-#create layer and recipes
+# create layer and recipes
 
 after build image we must follow below steps:
 
