@@ -47,8 +47,14 @@ $ mkdir -p recipes-customer/hello-world/hello-world
 
 Create a recipe file recipes-customer/hello-world/hello-world_1.0.0.bb
 
+Add the hello world sources
+
+To add a recipe to an existing image, you can add the additional packages to be installed to build/conf/local.conf. In the following example we add the hello-world from the chapter Create a recipe.
+
+IMAGE_INSTALL:append = " hello-world"
 
 
+bitbake hello-world
 
 
 
