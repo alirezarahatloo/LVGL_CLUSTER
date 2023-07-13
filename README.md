@@ -20,3 +20,36 @@ add enable_uart=1 to config.txt
 add console=ttyS0, 115200 to cmdline.txt
 
 
+#create layer and recipes
+
+after build image we must follow below steps:
+
+bitbake-layers create-layer MYPATH
+
+ls MYPATH
+
+$ tree ../layers/meta-customer/
+├── conf
+│   └── layer.conf
+├── COPYING.MIT
+├── README
+└── recipes-example
+    └── example
+        └── example_0.1.bb
+
+3 directories, 4 files
+
+After that you can add the path to the newly created layer to the Yocto Project environment in conf/bblayers.conf. Below is an example, where the line ${TOPDIR}/../layers/meta-customer \
+
+
+$ cd ../layers/meta-customer/
+$ mkdir -p recipes-customer/hello-world/hello-world
+
+Create a recipe file recipes-customer/hello-world/hello-world_1.0.0.bb
+
+
+
+
+
+
+
